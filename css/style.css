@@ -46,10 +46,69 @@ html{
 }
 
 body { 
-	font-family: 'Roboto', sans-serif;
+	font-family: "Open Sans", sans-serif;
 	font-style: normal;
-	font-weight: normal;
+	font-weight: 400;
 	font-size: 16px;
-	line-height: 140%;
-	color: #fff;
+	line-height: 20px;
+}
+
+.wrapper{
+	max-width: 1110px;
+	margin: 0 auto;
+}
+.header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+.header__wrapper{
+	min-height: 104px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+.header__logo{
+	margin-right: 60px;
+}
+.nav__list{
+	display: flex;
+}
+.nav__list-item-link{
+	text-decoration: none;
+	font-size: 14px;
+	line-height: 18px;
+	color: #0F0D0D;
+
+}
+.nav__list-item{
+	margin-right: 38px;
+}
+.nav__list-item-witharr{
+	display: flex;
+	align-items: flex-end;
+	margin-right: 38px;
+}
+.nav__list-item-witharr:last-child{
+	margin-right: 60px;
+}
+.nav__list-item-link:hover, .nav__list-item-link:focus, .nav__list-item-link:active{
+	opacity: 75%;
+}
+.nav__list-item-arrow{
+	padding-left: 3px;
+	max-height: 9px;
+}
+.header__options{
+	display: flex;
+}
+.header__options-item{
+	margin-right: 16px;
+}
+.header__options-item:last-child{
+	margin-right: 0px;
+}
+.header__options-item-link:hover, .header__options-item-link:focus, .header__options-item-link:active{
+	opacity: 75%;
 }
