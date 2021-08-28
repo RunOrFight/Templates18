@@ -11,7 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet"> 
     
     <link rel="stylesheet" href="./css/style.css">
-    <script src="/js/script.js" type="text/javascript"></script>
+
+
 </head>
 <body>
     <div class="flex-container">
@@ -21,70 +22,70 @@
                 <div class="header__wrapper">
     
                     <div class="header__logo">
-                        <a href="/" class="header__logo-link">
+                        <a href="#!" class="header__logo-link">
                             <img src="img/svg/logo.svg" alt="Octave" class="header__logo-link-img">    
                         </a>
                     </div>  
                     
                     <nav class="header__nav">
                         <ul class="nav__list">
-                            <li class="nav__list-item-witharr">
+                            <li class="nav__list-item-witharr" onmouseenter="categoryActive()" onmouseleave="categoryNoActive()">
     
-                                <a href="!#" class="nav__list-item-link">
+                                <a href="#!" class="nav__list-item-link">
                                     Каталог
                                 </a>
-                                <a href="!#" class="nav__list-item-arrow">
+                                <a href="#!" class="nav__list-item-arrow">
                                     <img  src="img/svg/arrow_down.svg" alt="^">
                                 </a>
                                 <div class="nav__menu category-menu">
                                     <ul class="nav__menu-list category-list">
                                         <li class="nav__menu-list-item ">
-                                            <a href="/" class="nav__menu-item-link">Струнные</a>
+                                            <a href="#!" class="nav__menu-item-link">Струнные</a>
                                         </li>
                                         <li class="nav__menu-list-item">
-                                            <a href="/" class="nav__menu-item-link">Клавишные</a>
+                                            <a href="#!" class="nav__menu-item-link">Клавишные</a>
                                         </li>
                                         <li class="nav__menu-list-item">
-                                            <a href="/" class="nav__menu-item-link">Ударные</a>
+                                            <a href="#!" class="nav__menu-item-link">Ударные</a>
                                         </li>
                                         <li class="nav__menu-list-item">
-                                            <a href="/" class="nav__menu-item-link">Духовые</a>
+                                            <a href="#!" class="nav__menu-item-link">Духовые</a>
                                         </li>
                                         <li class="nav__menu-list-item">
-                                            <a href="/" class="nav__menu-item-link">Звуковое оборудование</a>
+                                            <a href="#!" class="nav__menu-item-link">Звуковое оборудование</a>
                                         </li>
                                         <li class="nav__menu-list-item">
-                                            <a href="/" class="nav__menu-item-link">Световое оборудование</a>
+                                            <a href="#!" class="nav__menu-item-link">Световое оборудование</a>
                                         </li>
                                         <li class="nav__menu-list-item">
-                                            <a href="/" class="nav__menu-item-link">Аксессуары</a>
+                                            <a href="#!" class="nav__menu-item-link">Аксессуары</a>
                                         </li>
                                     </ul>
                                 </div>
     
                             </li>
                             <li class="nav__list-item">
-                                <a href="!#" class="nav__list-item-link">
+                                <a href="#!" class="nav__list-item-link">
                                     О нас
                                 </a>
                             </li>
                             <li class="nav__list-item">
-                                <a href="!#" class="nav__list-item-link">
+                                <a href="#!" class="nav__list-item-link">
                                     Доставка и оплата
                                 </a>
                             </li>
                             <li class="nav__list-item">
-                                <a href="!#" class="nav__list-item-link">
+                                <a href="#!" class="nav__list-item-link">
                                     Рассрочка
                                 </a>
                             </li>
                             <li class="nav__list-item">
-                                <a href="!#" class="nav__list-item-link">
+                                <a href="#!" class="nav__list-item-link">
                                     Гарантия и возврат
                                 </a>
                             </li>
                             <li class="nav__list-item-witharr">
-                                <a href="!#" class="nav__list-item-link">
+                                <a href="#!" class="nav__list-item-link">
                                     Контакты
                                 </a>
                                 <a href="#!" class="nav__list-item-arrow">
@@ -112,23 +113,23 @@
     
                     <ul class="header__options">
                         <li class="header__options-item">
-                            <button type="submit" class="header__options-item-link search">
+                            <button type="button" class="header__options-item-link search" onclick="searchFun()">
                                 <img src="img/svg/search.svg" alt="search" class="header__options-link-img">
                             </button>
                         </li>
-                        <form action="" method="POST">
+                        <form action="" method="POST" class="header__options-search">
                             <input type="text" autofocus placeholder="Поиск..."
                             class="options-activ">
                         </form>
                         <li class="header__options-item">
-                            <a href="!#" class="header__options-item-link">
+                            <a href="#!" class="header__options-item-link">
                                 <img src="img/svg/buy.svg" alt="buy" class="header__options-link-img">
                             </a>
                         </li>
                         <li class="header__options-item">
-                            <a href="!#" class="header__options-item-link">
+                            <button class="header__options-item-link" onclick="personFun()">
                                 <img src="img/svg/person.svg" alt="person" class="header__options-link-img">
-                            </a>
+                            </button>
                             <div class="login-form">
                                 <div class="login-form__header">
                                     <button class="login-form__header-btn in">Войти</button>
@@ -161,9 +162,6 @@
                         </div>
                         <div class="intro_left__bar">
                             <div class="intro_left__bar-item">
-                                <img src="img/svg/line_noactive.svg" alt="|">
-                            </div>
-                            <div class="intro_left__bar-item">
                                 <img src="img/svg/line_active.svg" alt="|">
                             </div>
                             <div class="intro_left__bar-item">
@@ -173,16 +171,24 @@
                                 <img src="img/svg/line_noactive.svg" alt="|">
                             </div>
                         </div>
-                        <div class="intro_left__arrow">
-                            <button class="intro_left__arrow-btn">
+                        <div class="intro_left__arrow " onclick="changeSlideLeft()">
+                            <button class="intro_left__arrow-btn arrow">
                                 <img src="img/litle_arrow.png" alt="->">
                             </button>
                         </div>
-                        <div class="intro_guitar">
-                            <img src="img/intro_gtr.png" alt="guitar" class="intro_cente-img">
+                        <div class="intro__guitar-slides">
+                            <div class="intro_guitar active">
+                                <img src="img/intro_gtr.png" alt="guitar" class="intro_cente-img">
+                            </div>
+                            <div class="intro_guitar ">
+                                <img src="img/intro_gtr2.png" alt="guitar" class="intro_cente-img">
+                            </div>
+                            <div class="intro_guitar ">
+                                <img src="img/intro_gtr3.png" alt="guitar" class="intro_cente-img">
+                            </div>
                         </div>
-                        <div class="intro_right__arrow">
-                            <button class="intro_right__arrow-btn">
+                        <div class="intro_right__arrow " onclick="changeSlideRight()">
+                            <button class="intro_right__arrow-btn arrow">
                                 <img src="img/litle_arrow-reverse.png" alt="->">
                             </button>
                         </div>
@@ -198,7 +204,7 @@
                                     и электрогитарой стерты навсегда</p>
                             </div>
                             <div class="intro_right__button">
-                                <a href="!#" class="intro_right__button-link">
+                                <a href="#!" class="intro_right__button-link">
                                     <button class="intro_right__button-btn blue-button">Подробнее</button></a>
                             </div>
                         </div>
@@ -210,25 +216,25 @@
             <section class="category">
                 <div class="wrapper">
                     <div class="category__flex-container">
-                        <a href="/">
+                        <a href="#!">
                             <div class="category__card">
                                 <img src="img/ucu.png" alt="ucu">
                                 <p class="category__card-text">Укулеле</p>
                             </div>
                         </a>    
-                        <a href="/">
+                        <a href="#!">
                             <div class="category__card">
                                 <img src="img/acoustic.png" alt="acoustic">
                                 <p class="category__card-text">Гитара акустическая</p>
                             </div>
                         </a>    
-                        <a href="/">
+                        <a href="#!">
                             <div class="category__card">
                                 <img src="img/combo.png" alt="combo">
                                 <p class="category__card-text">Комбоусилитель</p>
                             </div>
                         </a>    
-                        <a href="/">
+                        <a href="#!">
                             <div class="category__card">
                                 <img src="img/electric.png" alt="electric">
                                 <p class="category__card-text">Электрогитара</p>
@@ -236,25 +242,25 @@
                         </a>    
                     </div>
                     <div class="category__flex-container">
-                        <a href="/">
+                        <a href="#!">
                             <div class="category__card">
                                 <img src="img/truba.png" alt="truba">
                                 <p class="category__card-text">Труба</p>
                             </div>
                         </a>    
-                        <a href="/">
+                        <a href="#!">
                             <div class="category__card">
                                 <img src="img/string.png" alt="string">
                                 <p class="category__card-text">Струны  для гитары</p>
                             </div>
                         </a>    
-                        <a href="/">
+                        <a href="#!">
                             <div class="category__card">
                                 <img src="img/scrip.png" alt="scrip">
                                 <p class="category__card-text">Электроскрипка</p>
                             </div>
                         </a>    
-                        <a href="/">
+                        <a href="#!">
                             <div class="category__card">
                                 <img src="img/velo.png" alt="velo">
                                 <p class="category__card-text">Виолончель</p>
@@ -292,7 +298,7 @@
                         </div>                 
     
                     </div>
-                    <a href="/" class="read-more news">
+                    <a href="#!" class="read-more news">
                         <div class="read-more-link">
                             <p class="read-more-text">Посмотреть все новости</p>
                         </div>
@@ -316,7 +322,7 @@
                                 <p class="ad__subtitle-text">То, что нужно для идеального звука</p>
                             </div>
                             <div class="ad__button">
-                                <a href="!#" class="ad__button-link">
+                                <a href="#!" class="ad__button-link">
                                     <button class="ad__button-btn blue-button">Подробнее</button></a>
                             </div>
                         </div>
@@ -387,7 +393,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="/" class="read-more feedback">
+                    <a href="#!" class="read-more feedback">
                         <div class="read-more-link">
                             <p class="read-more-text">Посмотреть все отзывы</p>
                         </div>
@@ -403,7 +409,7 @@
             <div class="wrapper">
                 <div class="footer_flex-container">
                     <div class="footer__logo">
-                        <a href="/"><img src="img/svg/logo.svg" alt="Octave" class="footer__logo-img"></a>
+                        <a href="#!"><img src="img/svg/logo.svg" alt="Octave" class="footer__logo-img"></a>
                     </div>
                     <div class="footer__card">
                         <div class="footer__card-title">
@@ -423,9 +429,9 @@
                         </div>
                         <div class="footer__card-componet">
                             <div class="footer__card-social">
-                                <a href="/"><img src="img/svg/viber.svg" alt="viber" ></a>
-                                <a href="/"><img src="img/svg/telegram.svg" alt="telegram"></a>
-                                <a href="/"><img src="img/svg/insta.svg" alt="instagram"></a>
+                                <a href="#!"><img src="img/svg/viber.svg" alt="viber" ></a>
+                                <a href="#!"><img src="img/svg/telegram.svg" alt="telegram"></a>
+                                <a href="#!"><img src="img/svg/insta.svg" alt="instagram"></a>
                             </div>
                         </div>
                     </div>
@@ -434,16 +440,16 @@
                             <h1 class="footer__card-title-text">О нас </h1> 
                         </div>
                         <div class="footer__card-componet">
-                            <a href="/"><p class="footer__card-component-text">О компании</p></a>
+                            <a href="#!"><p class="footer__card-component-text">О компании</p></a>
                         </div>
                         <div class="footer__card-componet">
-                            <a href="/"><p class="footer__card-component-text">Реквизиты</p></a>
+                            <a href="#!"><p class="footer__card-component-text">Реквизиты</p></a>
                         </div>
                         <div class="footer__card-componet">
-                            <a href="/"><p class="footer__card-component-text">Новости и акции</p></a>
+                            <a href="#!"><p class="footer__card-component-text">Новости и акции</p></a>
                         </div>
                         <div class="footer__card-componet">
-                            <a href="/"><p class="footer__card-component-text">Отзывы</p></a>
+                            <a href="#!"><p class="footer__card-component-text">Отзывы</p></a>
                         </div>
                     </div>
                     <div class="footer__card">
@@ -451,16 +457,16 @@
                             <h1 class="footer__card-title-text">Клиентам</h1> 
                         </div>
                         <div class="footer__card-componet">
-                            <a href="/"><p class="footer__card-component-text">Рассрочка</p></a>
+                            <a href="#!"><p class="footer__card-component-text">Рассрочка</p></a>
                         </div>
                         <div class="footer__card-componet">
-                            <a href="/"><p class="footer__card-component-text">Доставка и оплата</p></a>
+                            <a href="#!"><p class="footer__card-component-text">Доставка и оплата</p></a>
                         </div>
                         <div class="footer__card-componet">
-                            <a href="/"><p class="footer__card-component-text">Гарантия и возврат</p></a>
+                            <a href="#!"><p class="footer__card-component-text">Гарантия и возврат</p></a>
                         </div>
                         <div class="footer__card-componet">
-                            <a href="/"><p class="footer__card-component-text">Политика конфиденциальности</p></a>
+                            <a href="#!"><p class="footer__card-component-text">Политика конфиденциальности</p></a>
                         </div>
                     </div>
                 </div>
@@ -468,5 +474,6 @@
         </footer>
 
     </div>
+    <script src="/js/script.js" type="text/javascript"></script>
 </body>
 </html>
